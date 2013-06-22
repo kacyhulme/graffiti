@@ -11,3 +11,10 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+graffiti:
+  title: First Photo
+  description:
+    This is the first photo for my website Graffiti
+  price: 874
+  image_url: graffitipic1.jpg
