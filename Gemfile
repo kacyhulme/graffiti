@@ -15,6 +15,7 @@ group :production do
 end
 
 gem 'thin'
+gem 'unicorn'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
