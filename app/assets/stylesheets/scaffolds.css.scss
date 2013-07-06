@@ -2,6 +2,7 @@ body {
   background-color: #814;
   color: #000000;
   font-family: verdana, arial, helvetica, sans-serif;
+  text-transform: lowercase; /* force text to lowercase */
   font-size: 13px;
   line-height: 18px;
 }
@@ -9,6 +10,7 @@ body {
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
+  text-transform: lowercase; /* force text to lowercase */
   line-height: 18px;
 }
 
@@ -24,8 +26,8 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #FF99E4;
   }
 }
 
