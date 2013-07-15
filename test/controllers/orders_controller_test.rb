@@ -11,11 +11,6 @@ class OrdersControllerTest < ActionController::TestCase
     assert_not_nil assigns(:orders)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
   test "should create order" do
     assert_difference('Order.count') do
       post :create, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
@@ -56,7 +51,7 @@ class OrdersControllerTest < ActionController::TestCase
   test "should get new" do
     item = LineItem.new
     item.build_cart
-    item.product = products(:ruby)
+    item.product = products(:graffiti)
     item.save!
     session[:cart_id] = item.cart.id
 
