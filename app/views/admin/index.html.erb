@@ -1,6 +1,7 @@
 <h1>Welcome</h1>
 
-It is <%= Time.now %>
+It is <%= Time.now.strftime("%m/%d/%y %I:%M:%S %p") %>
+
 <p>
 We have <%= pluralize(@total_orders, "order") %>.
 </p>
