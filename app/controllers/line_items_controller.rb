@@ -59,11 +59,25 @@ class LineItemsController < ApplicationController
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json
+ 
   def destroy
+    @line_item = LineItem.find(params[:id])
     @line_item.destroy
+
     respond_to do |format|
-      format.html { redirect_to line_items_url }
-      format.json { head :no_content }
+
+# check for any line_items that reference the current cart.
+# using 'current_cart' as the parameter will fail in the test.
+
+      if LineItem.find_by_cart_id(@line_item.cart_id).nil? 
+        format.html { redirect_to store_url, 
+             notice: 'Your cart is currently empty' }
+      else
+        format.html { redirect_to current_cart,
+           notice: 'Line item removed' }
+      end
+
+      format.json { head :ok }
     end
   end
 
