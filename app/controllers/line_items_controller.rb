@@ -3,7 +3,7 @@ class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authorize, only: :create
+  skip_before_action :authorize, only: [:create, :destroy]
   
   # GET /line_items
   # GET /line_items.json
@@ -73,7 +73,7 @@ class LineItemsController < ApplicationController
         format.html { redirect_to store_url, 
              notice: 'Your cart is currently empty' }
       else
-        format.html { redirect_to current_cart,
+        format.html { redirect_to store_url,
            notice: 'Line item removed' }
       end
 

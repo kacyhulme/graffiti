@@ -1,4 +1,5 @@
 Graffiti::Application.routes.draw do
+  
  get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -16,6 +17,12 @@ Graffiti::Application.routes.draw do
 
   resources :carts
 
+  resources :questions
+
+  resources :news
+
+  resources :contacts
+  
   get "store/index"
   resources :products do    
     get :who_bought, on: :member
