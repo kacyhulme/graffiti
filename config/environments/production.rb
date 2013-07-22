@@ -79,13 +79,14 @@ Graffiti::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.delivery_method = :smtp
+  
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
-    port: 587,
-    domain: "domain.of.sender.net",
+    port: 465,
+    domain: "http://arcane-garden-7729.herokuapp.com/",
     authentication: "plain",
-    user_name: "dave",
-    password: "secret",
+    user_name: "kacyhulme",
+    password: "scarletsax747",
     enable_starttls_auto: true
   }
 end
