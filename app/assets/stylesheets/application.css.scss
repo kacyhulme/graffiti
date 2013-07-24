@@ -20,7 +20,7 @@
   padding: 10px;
   border-bottom: 2px solid;
   // font-family: verdana, arial, helvetica, sans-serif;
-  font: 40px/40px verdana, arial, sans-serif;
+  font: 40px/40px cursive, verdana;
   text-transform: lowercase; /* force text to lowercase */
   color: #4A0F18;
   text-align: center;
@@ -38,7 +38,7 @@
   padding: 1em;
   margin-bottom: 2em;
   background-color: #f0f0f0;
-  font: bold smaller sans-serif;
+  font: bold smaller cursive;
 }
 
 #columns {
@@ -65,7 +65,7 @@
     }
 
     #cart {
-      font-size: smaller;
+      font-size: 12px;
       color: white;
     
 
@@ -84,7 +84,7 @@
 
         a {
           color: #000;
-          font-size: small;
+          font-size: 14px;
         }
       }
     }
@@ -100,7 +100,7 @@
     legend {
       color: #dfd;
       background: #141;
-      font-family: sans-serif;
+      font-family: cursive, verdana;
       padding: 0.2em 1em;
     }
   }

@@ -11,15 +11,15 @@
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
-    font:  150% sans-serif;
+    font:  14px cursive, sans-serif;
     color: #226;
-    border-bottom: 3px dotted #FF65B1;
+    border-bottom: 3px solid #FF65B1;
   }
 
   /* An entry in the store catalog */
   .entry {
     overflow: auto;
-    margin-top: 1em;
+    margin-top: 2em;
     border-bottom: 1px dotted #77d;
     min-height: 180px;
 
@@ -32,8 +32,8 @@
     }
 
     h3 {
-      font-size: 120%;
-      font-family: verdana, arial, helvetica, sans-serif;
+      font-size: 16px;
+      font-family: cursive, verdana, arial, helvetica, sans-serif;
       margin-left: 180px;
       margin-top: 0;
       margin-bottom: 2px;
