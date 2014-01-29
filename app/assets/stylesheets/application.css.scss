@@ -1,6 +1,6 @@
-@import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Buda:300);
-/*
+/*@import "bootstrap";
+*//*@import url(http://fonts.googleapis.com/css?family=Buda:300);
+*//*
  * This is a manifest file that'll be compiled into application.css, which will
  * include all the files listed below.
  * 
@@ -16,13 +16,18 @@
  *= require_tree .
  */
 
+
+h1 {
+  text-transform: lowercase; /* force text to lowercase */
+}
+
 /* START_HIGHLIGHT */
 #banner {
   background: #FF6CE9;
   padding: 10px;
   border-bottom: 2px solid;
-  font-family: 'Buda', cursive;
-  font: 40px/40px 'Buda', cursive;
+  font-family: cursive;
+  font: 40px/40px cursive;
   text-transform: lowercase; /* force text to lowercase */
   color: #4A0F18;
   text-align: center;
@@ -40,7 +45,7 @@
   padding: 1em;
   margin-bottom: 2em;
   background-color: #f0f0f0;
-  font: bold smaller 'Buda';
+  font: bold smaller cursive;
 }
 
 #columns {
@@ -102,7 +107,7 @@
     legend {
       color: #dfd;
       background: #141;
-      font-family: 'Buda', cursive;
+      font-family: cursive;
       padding: 0.2em 1em;
     }
   }
