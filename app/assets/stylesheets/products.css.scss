@@ -9,6 +9,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'variables';
+
 /* START_HIGHLIGHT */
 .products {
   table {
@@ -50,11 +52,11 @@
   }
 
   .list_line_even {
-    background:   #e0f8f8;
+    background:   $secondary-color;
   }
 
   .list_line_odd {
-    background:   #f8b0f8;
+    background:   $tertiary-color;
   }
 }
 /* END_HIGHLIGHT */

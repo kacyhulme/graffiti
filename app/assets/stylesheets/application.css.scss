@@ -1,6 +1,4 @@
-/*@import "bootstrap";
-*//*@import url(http://fonts.googleapis.com/css?family=Buda:300);
-*//*
+/*
  * This is a manifest file that'll be compiled into application.css, which will
  * include all the files listed below.
  * 
@@ -16,20 +14,17 @@
  *= require_tree .
  */
 
-
-h1 {
-  text-transform: lowercase; /* force text to lowercase */
-}
+@import 'variables';
 
 /* START_HIGHLIGHT */
 #banner {
-  background: #FF6CE9;
+  background-color: $secondary-color;
   padding: 10px;
-  border-bottom: 2px solid;
-  font-family: cursive;
-  font: 40px/40px cursive;
+  border: 5px solid $primary-accent-color;
+  font: 100% $font-stack;
+  font-size: 40px;
   text-transform: lowercase; /* force text to lowercase */
-  color: #4A0F18;
+  color: $quaternary-color;
   text-align: center;
 
   img {
@@ -45,23 +40,25 @@ h1 {
   padding: 1em;
   margin-bottom: 2em;
   background-color: #f0f0f0;
-  font: bold smaller cursive;
+  font: 100% $font-stack;
+  font-size: smaller;
+  font-style: bold;
 }
 
 #columns {
-  background: #FED3F8;
+  background: $secondary-color;
 
   #main {
     margin-left: 18em;
     padding: 1em;
-    background: white;
+    background: $primary-color;
   }
 
   #side {
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #FED3F8;
+    background: $secondary-color;
 
     form, div {
       display: inline;
@@ -102,12 +99,12 @@ h1 {
 //#START:form
 .graffiti_form {
   fieldset {
-    background: #efe;
+    background: $secondary-color;
 
     legend {
       color: #dfd;
       background: #141;
-      font-family: cursive;
+      font: 100% $font-stack;
       padding: 0.2em 1em;
     }
   }

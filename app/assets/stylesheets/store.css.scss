@@ -6,21 +6,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'variables';
+
 /* START_HIGHLIGHT */
 .store {
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
-    font:  14px cursive, sans-serif;
-    color: #226;
-    border-bottom: 3px solid #FF65B1;
+    font: 100% $font-stack;
+    color: $quaternary-color;
+    border-bottom: 3px solid $tertiary-accent-color;
   }
 
   /* An entry in the store catalog */
   .entry {
     overflow: auto;
     margin-top: 2em;
-    border-bottom: 1px dotted #77d;
+    border-bottom: 1px dotted $tertiary-accent-color;
     min-height: 180px;
 
     img {
@@ -33,11 +35,11 @@
 
     h3 {
       font-size: 16px;
-      font-family: cursive;
+      font: 100% $font-stack;
       margin-left: 180px;
       margin-top: 0;
       margin-bottom: 2px;
-      color: #000;
+      color: $quaternary-color;
     }
 
     .description {
@@ -55,7 +57,7 @@
     }
 
     .price {
-      color: #000;
+      color: $quaternary-color;
       font-weight: bold;
       margin-right: 3em;
     }

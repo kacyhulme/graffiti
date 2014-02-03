@@ -1,21 +1,26 @@
+@import 'variables';
+
 body {
-  background-color: #9F0088;
-  color: #000000;
-  font-family: cursive;
+  background-color: $primary-color;
+  color: $quaternary-color;
+  font: 100% $font-stack;
   text-transform: lowercase; /* force text to lowercase */
   font-size: 14px;
   line-height: 18px;
 }
 
+h1 {
+  text-transform: lowercase; /* force text to lowercase */
+}
+
 p, ol, ul, td {
-  font-family: cursive;
-  font-size: 14px;
+  font: 100% $font-stack;
   text-transform: lowercase; /* force text to lowercase */
   line-height: 18px;
 }
 
 pre {
-  background-color: #eee;
+  background-color: $primary-color;
   padding: 10px;
   font-size: 14px;
 }
