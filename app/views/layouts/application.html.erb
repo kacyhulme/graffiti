@@ -5,47 +5,42 @@
 	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
-	<%= yield :contact_head %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="<%= controller.controller_name %>">
-	<div id="banner">
-	  	<div><%= @page_title || "That On Which You Focus..." %></div>
- 			<figure><img src="/assets/infinitisymbol.jpg" class="infiniti" alt="Infiniti" /></figure> 
-	  	<p class="clear"></p>
-	</div>
-	<div id="columns">
-		<aside>
-			<div id="cart">
-				<% if @cart %>
- 					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-  					<%= render @cart %>
-					<% end %>
-				<% end %>
-			</div>
 
-			<ul>
-				<li><a <%= link_to 'Home', store_path %> </a></li>
-				<li><a <%= link_to 'News', news_index_path %> </a></li>
- 				<li><a <%= link_to 'About the Artist', contacts_path %> </a></li>
-				<br>
-				<li><a <%= link_to 'Log In', admin_path %> </a></li>
-			</br>
-				<li> NOTE: Log in with name: "guest" password: "password" if you are a first time visitor</li>
-			</ul>
+	<%= render 'layouts/navbar' %>
 
-			<% if session[:user_id] %>
-				<ul>
-					<li><%= link_to 'Orders', orders_path %></li>
-					<li><%= link_to 'Products', products_path %></li>
-					<li><%= link_to 'Users', users_path %></li>
-				</ul>
-				<%= button_to 'Logout', logout_path, method: :delete %>
-			<% end %>
+<% if session[:user_id] %>	
+<div class="container">
+	<aside>
+		<ul>
+			<li><%= link_to 'Orders', orders_path %></li>
+			<li><%= link_to 'Products', products_path %></li>
+			<li><%= link_to 'Users', users_path %></li>
+			<li class=".navbar-btn"><%= button_to 'Logout', logout_path, method: :delete %></li>
+		</ul>
+		
+		<% if @cart %>
+		<%= render @cart %>
+		<% end %>
+		
+	</aside>
+</div>
+<% end %>
 
-		</aside>
-		<div id="main">
-		<%= yield %>
+	<!-- 	<%# if @cart %>
+				<%#= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+				<%#= render @cart %>
+			<%# end %>
+		<%# end %> -->
+		
+		<div class="container">
+			<div class="col-xs-12">
+				<%= yield %>
+			</div>		
 		</div>
-	</div>
+	
+</div>
 </body>
 </html>

@@ -4,20 +4,24 @@
 
 <h1>Photos Taken By Kacy Hulme</h1>
 
-<% cache ['store', Product.latest] do %>
-	<% @products.each do |product| %>
-		<% cache ['entry', product] do %>
-			<div class="entry">
-				<%= image_tag(product.image_url) %>
-				<h3><%= product.title %></h3>
-		  		<span class="description"><%= sanitize(product.description) %></span>
-				<div class="price_line">
-      		<span class="price"><%= number_to_currency(product.price) %></span>	
-      		<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>	
-    		</div>
-			</div>
+<div class="container-fluid">
+	<div class="row">
+		<% cache ['store', Product.latest] do %>
+			<% @products.each do |product| %>
+				<% cache ['entry', product] do %>
+					<div class="col-xs-3">
+						<%= image_tag(product.image_url) %>
+						<h3><%= product.title %></h3>
+				  	<div><%= sanitize(product.description) %></div>
+						<div><%= number_to_currency(product.price) %></div>	
+			      <button type="button" class="btn btn-info"><%= link_to 'Add to Cart', line_items_path(product_id: product), remote: true %></button>
+					</div>
+				<% end %>
+			<% end %>
 		<% end %>
-	<% end %>
-<% end %>
+	</div>
+</div>
 
+<footer>
 this page has been viewed <%= pluralize session[:counter], 'time' %>
+</footer>
