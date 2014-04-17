@@ -10,7 +10,7 @@
 			<% @products.each do |product| %>
 				<% cache ['entry', product] do %>
 					<div class="col-xs-3">
-						<%= image_tag(product.image_url) %>
+						<img class="img-responsive"><%= image_tag(product.image_url) %></img>
 						<h3><%= product.title %></h3>
 				  	<div><%= sanitize(product.description) %></div>
 						<div><%= number_to_currency(product.price) %></div>	
