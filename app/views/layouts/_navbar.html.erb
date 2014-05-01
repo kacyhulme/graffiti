@@ -14,9 +14,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a <%= link_to 'Home', store_path %> </a></li>
-        <li><a <%= link_to 'News', news_index_path %> </a></li>
-        <li><a <%= link_to 'Log In', admin_path %> </a></li>
+        <li><a <%= link_to 'Home', store_path %> </a></li>
+        <li><a <%= link_to 'About the Artist', news_index_path %> </a></li>
+          <% if session[:user_id] %>
+            <li><a <%= link_to 'Log Out', logout_path, method: :delete%> </a></li>
+          <% else %>
+            <li><a <%= link_to 'Admin Log In', admin_path %> </a></li>
+          <% end %>      
       </ul>
       <% if session[:user_id] %>
         <ul class="nav navbar-nav navbar-right">
