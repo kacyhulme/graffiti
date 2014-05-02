@@ -1,7 +1,11 @@
-img {
-  border: 5px;
-  padding: 5px;
-  margin: 5px;
-  height: 200px;
-  width: 200px;
+#productdescription
+{
+	height: 375px;
+	width: 200px;
+}
+
+#img {
+	height: 200px;
+	width: 180px;
+	overflow: hidden;
 }

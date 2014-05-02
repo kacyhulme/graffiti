@@ -4,18 +4,22 @@
 
 <h1>Photos Taken By Kacy Hulme</h1>
 
-<div class="row">
-	<% @products.in_groups_of(3) do |products| %>
-		<div class="col-md-3">
-			<%= image_tag(product.image_url) %>
-			<h3><%= product.title %></h3>
-	  	<div><%= sanitize(product.description) %></div>
-			<div><%= number_to_currency(product.price) %></div>
-      <%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-info btn-sm', remote: true %>
-		</div>
-	<% end %>
-</div>
+<% @products.in_groups_of(4).each do |group| %>
+  <div class='row'>
+    <% group.each do |product| %>
+      <% if product %>
+        <div class='col-md-3' id="productdescription">
+          <%= image_tag(product.image_url, class: "img-responsive", id:"img") %>
+          <h3><%= product.title %></h3>
+          <div><%= sanitize(product.description) %></div>
+          <div><%= number_to_currency(product.price) %></div> 
+          <%= button_to 'Add to Cart', line_items_path(product_id: product), class: 'btn btn-info btn-sm', remote: true %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
 
 <footer>
-this page has been viewed <%= pluralize session[:counter], 'time' %>
+	<p>this page has been viewed <%= pluralize session[:counter], 'time' %></p>
 </footer>
