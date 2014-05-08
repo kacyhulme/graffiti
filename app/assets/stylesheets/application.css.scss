@@ -18,5 +18,17 @@ footer {
   margin-top: 40px;
 }
 
+
+.well {
+	background-color: light gray; 
+	text-align: center;
+}
+
+.list_image  {
+	height: 200px;
+	width: 180px;
+	overflow: hidden;
+}
+
  @import "bootstrap";
 

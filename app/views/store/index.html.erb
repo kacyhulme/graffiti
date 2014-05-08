@@ -2,6 +2,12 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<% if session[:user_id] %>
+<div></div>
+<% else %>
+  <div class="well well-sm">For Admin Access Use Log In: <br>NAME: guest <br>PASSWORD: password</div>
+<% end %>
+
 <h1>Photos Taken By Kacy Hulme</h1>
 
 <% @products.in_groups_of(4).each do |group| %>
